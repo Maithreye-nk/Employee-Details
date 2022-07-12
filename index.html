@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+<title>Employee Details</title>
+<linl rel="stylesheet" type="text/css" media="screen" href="style.css"/>
+<style>
+    .container {
+        width: 100%;
+    }
+.nav-button span{
+    float: right;
+    flex: 1;
+    align-items: center;
+    justify-content: space-between;
+
+}
+.serach {
+    float: left;
+    margin-left: 500px;
+}
+table {
+    width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+      }
+      tr:nth-child(even) {
+        background-color: #eee;
+      }
+      thead {
+        background: #333;
+        color: white;
+        font-weight: bold;
+        text-align: center;
+        }
+      tbody {
+        text-align: center;
+      }
+table, th, td {
+    border: 1px solid #000;
+}
+      h1 {
+        position: relative;
+        text-align: center;
+      }
+      svg {
+        position: relative;
+        color: #fff;
+        width: 15px;
+        height: 20px;
+      }
+@media(max-width: 700px){
+  table thead {
+    display: none;
+  }
+table, table tbody, table tr, table td {
+    display: block;
+    width: 100%;
+}
+table tr{
+    margin-bottom: 15px;
+}
+table td{
+    text-align: right;
+    padding-left: 50%;
+    text-align: right;
+    position: relative;
+}
+table td::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 0;
+    width: 25%;
+    padding-left: 15px;
+    font-size: 15px;
+    font-weight: bold;
+    text-align: left;
+}
+.nav-button {
+    margin-left: 0px;
+}
+.nav-button span {
+    margin-right: 0px;
+}
+.search{
+    margin-left: 0px;
+}
+}
+</style>
+</head>
+<body>
+    <div class="container">
+<div class="h1">
+<h1>Employee Details</h1>
+</div><br>
+<nav>
+<div class="nav-button">
+<input type="button" value="1">
+<input type="button" value="2">
+<input type="button" value="3">    
+<span><input type="button" class="btn-float-right" value="Refresh"></span>
+    </div></nav><br>
+    <div class="search">
+    <input type="search" id="query" name="q" placeholder="search...">
+    <button><svg viewBox="0 0 1024 1024"><path class="path1" d="M848.471 928l-263.059-263.059c-48.941 36.706-110.118 55.059-177.412 55.059-171.294 0-312-140.706-312-312s140.706-312 312-312c171.294 0 312 140.706 312 312 0 67.294-24.471 128.471-55.059 177.412l263.059 263.059-79.529 79.529zM189.623 408.078c0 121.364 97.091 218.455 218.455 218.455s218.455-97.091 218.455-218.455c0-121.364-103.159-218.455-218.455-218.455-121.364 0-218.455 97.091-218.455 218.455z"></path></svg></button>
+</div><br>
+<div>
+<table>
+<thead>
+<th>Name</th>
+<th>ID</th>
+<th>Department</th>
+<th>DOJ</th>
+<th>Salary</th>
+</thead>
+<tbody>
+<tr>
+<td data-label="Name">Maithreye</td>
+<td data-label="ID">E1</td>
+<td data-label="Department">Accounts</td>
+<td data-label="DOJ">08/05/2022</td>
+<td data-label="Salary" >10000</td>
+</tr>
+<tr>
+<td data-label="Name">Priyanka</td>
+<td data-label="ID" >E2</td>
+<td data-label="Department">IT</td>
+<td data-label="DOJ">09/11/2021</td>
+<td data-label="Salary" >20000</td>
+</tr>
+<tr>
+<td data-label="Name">Dhivya</td>
+<td data-label="ID">E3</td>
+<td data-label="Department">IT</td>
+<td data-label="DOJ">27/05/2020</td>
+<td data-label="Salary">30000</td>
+</tr>
+<tr>
+<td data-label="Name">Monika</td>
+<td data-label="ID">E4</td>
+<td data-label="Department">Accounts</td>
+<td data-label="DOJ">23/09/2020</td>
+<td data-label="Salary" >10000</td>
+</tr>
+<tr>
+<td data-label="Name" >kirthika</td>
+<td data-label="ID">E5</td>
+<td data-label="Department">IT</td>
+<td data-label="DOJ">24/10/2021</td>
+<td data-label="Salary">20000</td>
+</tr>
+</tbody>
+</table>
+</div><br>
+<div class="text-center">
+<button type="button" class="btn btn-primary">clear</button>
+</div>
+    </div>
+</body>
+</html>
